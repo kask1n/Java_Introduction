@@ -1,4 +1,4 @@
-//import java.time.LocalDateTime;
+package Java_Seminar1_CW;//import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.*;
 
@@ -7,7 +7,7 @@ class Java_Seminar1_CW_Task0 {
         System.out.println("Hello, world!");
 
         LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.YYYY HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
         System.out.println(formatter.format(now));
     }
 }

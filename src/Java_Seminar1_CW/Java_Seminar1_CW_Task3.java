@@ -4,8 +4,8 @@
  * Таким образом, первые несколько (или все) элементов массива должны быть отличны от заданного, а остальные - равны ему.
  */
 
-//import java.lang.Character;
-//
+import java.lang.Character;
+
 //public class Java_Seminar1_HW_Task3 {
 //    public static void main(String[] args) {
 //        int[] nums = new int[]{3, 2, 2, 3};

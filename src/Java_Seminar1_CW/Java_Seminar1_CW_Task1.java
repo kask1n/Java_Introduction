@@ -1,4 +1,4 @@
-/* Задача 1:
+package Java_Seminar1_CW;/* Задача 1:
  * Написать программу, которая запросит пользователя ввести <Имя> в консоли.
  * Получит введенную строку и выведет в консоль сообщение “Привет, <Имя>!”
  *
@@ -19,7 +19,7 @@ import java.time.LocalTime;
 public class Java_Seminar1_CW_Task1 {
     public static void main(String[] args) {
         Scanner iScanner = new Scanner(System.in, "cp866"); // 866 - кириллица.
-        System.out.printf("Введите Имя: ");
+        System.out.print("Введите Имя: ");
         String name = iScanner.nextLine();
 
         LocalTime time = LocalTime.now();

@@ -1,3 +1,5 @@
+package Java_Lecture1;
+
 /**
  * program # Автоматическое создание сниппета в VSCode.
  */
