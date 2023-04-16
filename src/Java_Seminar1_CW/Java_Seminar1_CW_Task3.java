@@ -6,7 +6,7 @@
 
 import java.lang.Character;
 
-//public class Java_Seminar1_HW_Task3 {
+//public class Java_Seminar1_CW_Task3 {
 //    public static void main(String[] args) {
 //        int[] nums = new int[]{3, 2, 2, 3};
 //        int val = 3;
@@ -21,7 +21,7 @@ import java.lang.Character;
 //import java.lang.reflect.Array;
 //        import java.util.Arrays;
 //
-//public class Java_Seminar1_HW_Task3 {
+//public class Java_Seminar1_CW_Task3 {
 //    public static void main(String[] args) {
 //        int[] arr = {3, 2, 2, 3, 4, 1};
 //        int[] arrRes = new int[arr.length];
