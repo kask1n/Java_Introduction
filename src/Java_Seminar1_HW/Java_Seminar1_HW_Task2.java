@@ -1,38 +1,29 @@
-/*
- Вывести все простые числа от 1 до 1000
+/* Задача 2.
+ * Вывести все простые числа от 1 до 1000.
  */
 
 package Java_Seminar1_HW;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Java_Seminar1_HW_Task2 {
     public static void main(String[] args) {
-        int count = 0;
-        for (int i = 2; i < 1001; i++) {
-            int divider = 2;
-            boolean flag = true;
-            while (divider * divider <= i && flag) {//j перебираем до корня из i
-                if (i % divider == 0)
-                    flag = false;
-                divider++;
-            }
-            if (flag)
-                count++;
-        }
-// посчитали длину массива
-        int arr[] = new int[count];
 
-        int x = 0;
-        for (int i = 2; i < 1001; i++) {
+        ArrayList<Integer> simpleNums = new ArrayList<>();
+        for (int num = 2; num <= 1000; num++) {
+
             boolean flag = true;
-            for (int divider = 2; divider * divider <= i && flag; divider++) {
-                if (i % divider == 0)
+            for (int divider = 2; divider * divider <= num; divider++) {
+                if (num % divider == 0) {
                     flag = false;
+                    break;
+                }
             }
-            if (flag)
-                arr[x++] = i;//записываем i в массив c индексом x и с последующим инкрементом
+
+            if (flag) simpleNums.add(num);
         }
-        System.out.println(Arrays.toString(arr));
+
+        System.out.printf("\n-> В диапазоне от 2 до 1000 находится %d простых чисел, в том числе:\n", simpleNums.size());
+        System.out.println(simpleNums);
     }
 }
