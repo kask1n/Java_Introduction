@@ -402,12 +402,12 @@ public class Java_Lecture1 {
 //        }
 
 // ВАРИАНТ ЧТЕНИЯ ПОСТРОЧНО (ЧЕРЕЗ БУФЕР):
-//        System.out.println();
-//        BufferedReader br = new BufferedReader(new FileReader("file.txt"));
-//        String str;
-//        while ((str = br.readLine()) != null) {
-//            System.out.printf("== %s ==\n", str);
-//        }
-//        br.close();
+        System.out.println();
+        BufferedReader br = new BufferedReader(new FileReader("file.txt"));
+        String str;
+        while ((str = br.readLine()) != null) {
+            System.out.printf("== %s ==\n", str);
+        }
+        br.close();
     }
 }

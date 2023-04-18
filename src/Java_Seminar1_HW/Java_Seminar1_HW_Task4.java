@@ -14,7 +14,7 @@ public class Java_Seminar1_HW_Task4 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите цифры 0...9 или '?' через запятую для уравнения вида XX + XX = XX");
+        System.out.println("\nВведите цифры 0...9 или '?' через запятую для уравнения вида XX + XX = XX");
         String line = scanner.nextLine().trim().replaceAll(",", "");
         scanner.close();
 
@@ -77,12 +77,13 @@ public class Java_Seminar1_HW_Task4 {
                                         
                     -> Для уравнения вида
                     %c%c + %c%c = %c%c
-                    существуют следующие решения:
-                    """, a, b, c, d, e, f);
+                    существуют следующие решения (%d):
+                    """, a, b, c, d, e, f, solutions.size());
 
-            for (String solution : solutions) {
-                System.out.println(solution);
-            }
+//            for (String solution : solutions) {
+//                System.out.println(solution);
+//            }
+            System.out.printf(String.join("\n", solutions) + "\n");
 
         } else {
             System.out.println("\n-> Решений нет.");

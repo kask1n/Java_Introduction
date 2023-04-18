@@ -1,4 +1,4 @@
-package Java_Seminar1_CW;/* Задача 1:
+/* Задача 1:
  * Написать программу, которая запросит пользователя ввести <Имя> в консоли.
  * Получит введенную строку и выведет в консоль сообщение “Привет, <Имя>!”
  *
@@ -12,15 +12,18 @@ package Java_Seminar1_CW;/* Задача 1:
  * "Доброй ночи, <Имя>!", если время от 23:00 до 4:59
  */
 
+package Java_Seminar1_CW;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import java.time.LocalTime;
 
 public class Java_Seminar1_CW_Task1 {
     public static void main(String[] args) {
-        Scanner iScanner = new Scanner(System.in, "cp866"); // 866 - кириллица.
-        System.out.print("Введите Имя: ");
+        Scanner iScanner = new Scanner(System.in, StandardCharsets.UTF_8); // Кириллица.
+        System.out.print("\nВведите Имя: ");
         String name = iScanner.nextLine();
+        iScanner.close();
 
         LocalTime time = LocalTime.now();
         if (time.getHour() >= 5 && time.getHour() < 12) {
@@ -32,7 +35,5 @@ public class Java_Seminar1_CW_Task1 {
         } else {
             System.out.printf("Доброй ночи, %s!", name);
         }
-
-        iScanner.close();
     }
 }
