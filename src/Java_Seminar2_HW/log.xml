@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-25T16:50:15.436664100Z</date>
+  <millis>1682441415436</millis>
+  <nanos>664100</nanos>
+  <sequence>0</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[13, 2, 7, 9, 10]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.475077100Z</date>
+  <millis>1682441415475</millis>
+  <nanos>77100</nanos>
+  <sequence>1</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 13, 7, 9, 10]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.475077100Z</date>
+  <millis>1682441415475</millis>
+  <nanos>77100</nanos>
+  <sequence>1</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 13, 7, 9, 10]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.476075Z</date>
+  <millis>1682441415476</millis>
+  <nanos>75000</nanos>
+  <sequence>2</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 13, 9, 10]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.476075Z</date>
+  <millis>1682441415476</millis>
+  <nanos>75000</nanos>
+  <sequence>2</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 13, 9, 10]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.476075Z</date>
+  <millis>1682441415476</millis>
+  <nanos>75000</nanos>
+  <sequence>2</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 13, 9, 10]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.476075Z</date>
+  <millis>1682441415476</millis>
+  <nanos>75000</nanos>
+  <sequence>3</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 9, 13, 10]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.476075Z</date>
+  <millis>1682441415476</millis>
+  <nanos>75000</nanos>
+  <sequence>3</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 9, 13, 10]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.476075Z</date>
+  <millis>1682441415476</millis>
+  <nanos>75000</nanos>
+  <sequence>3</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 9, 13, 10]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.476075Z</date>
+  <millis>1682441415476</millis>
+  <nanos>75000</nanos>
+  <sequence>3</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 9, 13, 10]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.477072100Z</date>
+  <millis>1682441415477</millis>
+  <nanos>72100</nanos>
+  <sequence>4</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 9, 10, 13]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.477072100Z</date>
+  <millis>1682441415477</millis>
+  <nanos>72100</nanos>
+  <sequence>4</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 9, 10, 13]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.477072100Z</date>
+  <millis>1682441415477</millis>
+  <nanos>72100</nanos>
+  <sequence>4</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 9, 10, 13]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.477072100Z</date>
+  <millis>1682441415477</millis>
+  <nanos>72100</nanos>
+  <sequence>4</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 9, 10, 13]</message>
+</record>
+<record>
+  <date>2023-04-25T16:50:15.477072100Z</date>
+  <millis>1682441415477</millis>
+  <nanos>72100</nanos>
+  <sequence>4</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task2</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>[2, 7, 9, 10, 13]</message>
+</record>
+</log>

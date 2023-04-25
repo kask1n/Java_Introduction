@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-25T16:50:49.915317700Z</date>
+  <millis>1682441449915</millis>
+  <nanos>317700</nanos>
+  <sequence>0</sequence>
+  <logger>Java_Seminar2_HW.Java_Seminar2_HW_Task4</logger>
+  <level>INFO</level>
+  <class>Java_Seminar2_HW.Java_Seminar2_HW_Task4</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>-&gt; 33 / 2 = 16,5
+</message>
+</record>
+</log>

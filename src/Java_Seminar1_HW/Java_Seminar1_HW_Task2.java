@@ -23,7 +23,10 @@ public class Java_Seminar1_HW_Task2 {
             if (flag) simpleNums.add(num);
         }
 
-        System.out.printf("\n-> В диапазоне от 2 до 1000 находится %d простых чисел, в том числе:\n", simpleNums.size());
+        System.out.printf("""
+
+                -> В диапазоне от 2 до 1000 находится %d простых чисел, в том числе:
+                """, simpleNums.size());
         System.out.println(simpleNums);
     }
 }

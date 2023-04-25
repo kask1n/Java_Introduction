@@ -80,9 +80,7 @@ public class Java_Seminar1_HW_Task4 {
                     существуют следующие решения (%d):
                     """, a, b, c, d, e, f, solutions.size());
 
-//            for (String solution : solutions) {
-//                System.out.println(solution);
-//            }
+//            for (String solution : solutions) System.out.println(solution); // Вывод через foreach.
             System.out.printf(String.join("\n", solutions) + "\n");
 
         } else {
