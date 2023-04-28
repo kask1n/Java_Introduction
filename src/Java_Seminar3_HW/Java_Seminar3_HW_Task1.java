@@ -8,6 +8,23 @@ package Java_Seminar3_HW;
 import java.util.Arrays;
 
 public class Java_Seminar3_HW_Task1 {
+    public static void main(String[] args) {
+        // ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(16, 34, 9, 56, 26, 11, 4, 89));
+        int[] arr = new int[]{16, 34, 9, 56, 26, 11, 4, 89};
+        System.out.printf("\nИсходный массив: %s\n", Arrays.toString(arr));
+        long start = System.nanoTime();
+
+// ПЕРВОЕ РЕШЕНИЕ (с пошаговым отображением решения):
+//        int[] res = mergeSort(arr);
+//        System.out.printf("Отсортированный массив: %s\n", Arrays.toString(res));
+
+// АЛЬТЕРНАТИВНОЕ РЕШЕНИЕ (быстрее в 27 раз):
+        SortUnsorted(arr, 0, arr.length - 1);
+        System.out.printf("Отсортированный массив: %s\n", Arrays.toString(arr));
+
+        long finish = System.nanoTime();
+        System.out.printf("Затраченное время: %f сек.\n", (finish - start) / 1e+9);
+    }
 
     private static int[] mergeSort(int[] arr) {
         if (arr.length <= 1)
@@ -56,23 +73,6 @@ public class Java_Seminar3_HW_Task1 {
         return res;
     }
 
-    public static void main(String[] args) {
-        // ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(16, 34, 9, 56, 26, 11, 4, 89));
-        int[] arr = new int[]{16, 34, 9, 56, 26, 11, 4, 89};
-        System.out.printf("\nИсходный массив: %s\n", Arrays.toString(arr));
-        long start = System.nanoTime();
-
-// ПЕРВОЕ РЕШЕНИЕ (с пошаговым отображением решения):
-//        int[] res = mergeSort(arr);
-//        System.out.printf("Отсортированный массив: %s\n", Arrays.toString(res));
-
-// АЛЬТЕРНАТИВНОЕ РЕШЕНИЕ (быстрее в 27 раз):
-        SortUnsorted(arr, 0, arr.length - 1);
-        System.out.printf("Отсортированный массив: %s\n", Arrays.toString(arr));
-
-        long finish = System.nanoTime();
-        System.out.printf("Затраченное время: %f сек.\n", (finish - start) / 1e+9);
-    }
 
     // a – массив;
     // lo – позиция первого элемента в массиве (для первой итерации = 0);
