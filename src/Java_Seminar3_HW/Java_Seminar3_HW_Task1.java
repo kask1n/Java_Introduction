@@ -59,7 +59,7 @@ public class Java_Seminar3_HW_Task1 {
     public static void main(String[] args) {
         // ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(16, 34, 9, 56, 26, 11, 4, 89));
         int[] arr = new int[]{16, 34, 9, 56, 26, 11, 4, 89};
-        System.out.printf("Исходный массив: %s\n", Arrays.toString(arr));
+        System.out.printf("\nИсходный массив: %s\n", Arrays.toString(arr));
         long start = System.nanoTime();
 
 // ПЕРВОЕ РЕШЕНИЕ (с пошаговым отображением решения):

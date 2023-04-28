@@ -10,12 +10,12 @@ import java.util.List;
 public class Java_Seminar3_HW_Task2 {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
-        System.out.println(arr);
+        System.out.printf("\nИсходный список: %s\n", arr);
 
         List<Integer> resArr = new ArrayList<>();
         for (int item : arr)
             if (item % 2 != 0) resArr.add(item);  // Записать в новый список только нечётные числа.
 
-        System.out.println(resArr);
+        System.out.printf("Список после удаления чётных: %s\n", resArr);
     }
 }

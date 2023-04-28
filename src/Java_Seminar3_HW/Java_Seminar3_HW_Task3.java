@@ -11,6 +11,7 @@ import java.util.Arrays;
 public class Java_Seminar3_HW_Task3 {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        System.out.printf("\nДан список: %s", arr);
 
         int max = arr.get(0);
         int min = arr.get(0);
@@ -24,9 +25,9 @@ public class Java_Seminar3_HW_Task3 {
             summ += item;
         }
 
-        System.out.printf("\nНаименьший элемент списка = %d\n", min);
-        System.out.printf("Наибольший элемент списка = %d\n", max);
-        System.out.printf("Среднее арифметическое списка = %s\n", format(summ / arr.size()));
+        System.out.printf("\nНаименьший элемент = %d\n", min);
+        System.out.printf("Наибольший элемент = %d\n", max);
+        System.out.printf("Среднее арифметическое = %s\n", format(summ / arr.size()));
     }
 
     private static String format(double value) {
