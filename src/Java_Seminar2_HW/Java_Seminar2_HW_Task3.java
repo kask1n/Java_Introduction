@@ -1,9 +1,11 @@
-// Дана строка json:
+// Домашнее задание 2. Задача 3*.
+// В файле содержится строка с данными (json):
 // [{"фамилия":"Иванов","оценка":"5","предмет":"Математика"},
 //  {"фамилия":"Петрова","оценка":"4","предмет":"Информатика"},
 //  {"фамилия":"Краснов","оценка":"5","предмет":"Физика"}]
 //
-// Написать метод, который распарсит этот текст и, используя StringBuilder, создаст строки вида:
+// Написать метод, который разберёт её на составные части (распарсит) и,
+// используя StringBuilder, создаст строки вида:
 // Студент [фамилия] получил [оценка] по предмету [предмет]. Например:
 // Студент Иванов получил 5 по предмету Математика.
 // Студент Петрова получил 4 по предмету Информатика.
@@ -18,7 +20,7 @@ import java.util.Scanner;
 public class Java_Seminar2_HW_Task3 {
     public static void main(String[] args) throws FileNotFoundException {
 
-        FileReader reader = new FileReader("E:\\Git\\Java_Introduction\\src\\Java_Seminar2_HW\\students_task3.txt");
+        FileReader reader = new FileReader("E:\\Git\\Java_Introduction\\src\\Java_Seminar2_HW\\Task3_Students.txt");
         Scanner scan = new Scanner(reader);
         String input = scan.nextLine();
         scan.close();

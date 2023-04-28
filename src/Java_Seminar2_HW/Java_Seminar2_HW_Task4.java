@@ -1,5 +1,5 @@
-/* Задача 3.
- * К калькулятору из предыдущего ДЗ добавить логирование.
+/* Домашнее задание 2. Задача 4*.
+ * К калькулятору из предыдущего дз добавить логирование.
  */
 
 package Java_Seminar2_HW;
@@ -25,7 +25,7 @@ public class Java_Seminar2_HW_Task4 {
         double b = scanner.nextDouble();
 
         Logger logger = Logger.getLogger(Java_Seminar2_HW_Task4.class.getName());
-        FileHandler info = new FileHandler("\\Git\\Java_Introduction\\src\\Java_Seminar2_HW\\log2.xml");
+        FileHandler info = new FileHandler("\\Git\\Java_Introduction\\src\\Java_Seminar2_HW\\Task4_Log.xml");
 
         String res = null;
         switch (operator) {

@@ -1,45 +1,35 @@
+// Домашняя работа. Задача 3.
+// Задан целочисленный список ArrayList.
+// Найти минимальное, максимальное и среднее арифметичское этого списка.
+
 package Java_Seminar3_HW;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Java_Seminar3_HW_Task3 {
     public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
-        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(4,5,6,7,8,9));
-        ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(1,2,3,4,5,6));
-        System.out.println(neRightJoin(arr,arr2));
-        System.out.println(neLeftJoin(arr,arr2));
-        System.out.println(neInnerJoin(arr,arr2));
-    }
-    public static ArrayList<Integer> neRightJoin (ArrayList<Integer> arr, ArrayList<Integer> arr2){
-        ArrayList<Integer> neRightJoin = new ArrayList<>();
-        for (Integer item : arr) {
-            if (!arr2.contains(item))
-                neRightJoin.add(item);
-        }
-        return neRightJoin;
-    }
-    public static ArrayList<Integer> neLeftJoin (ArrayList<Integer> arr, ArrayList<Integer> arr2){
-        ArrayList<Integer> neLeftJoin = new ArrayList<>();
-        for (Integer item : arr2) {
-            if (!arr.contains(item))
-                neLeftJoin.add(item);
-        }
-        return neLeftJoin;
-    }
-    public static ArrayList<Integer> neInnerJoin (ArrayList<Integer> arr, ArrayList<Integer> arr2){
-        ArrayList<Integer> neInnerJoin = new ArrayList<>();
+        int max = arr.get(0);
+        int min = arr.get(0);
+        double summ = 0;
+        for (int item : arr) {
+            if (max < item)
+                max = item;
 
-        for (Integer item : arr) {
-            if (!arr2.contains(item))
-                neInnerJoin.add(item);
+            if (min > item)
+                min = item;
+            summ += item;
         }
-        for (Integer item : arr2) {
-            if (!arr.contains(item))
-                neInnerJoin.add(item);
-        }
-        return neInnerJoin;
 
+        System.out.printf("\nНаименьший элемент списка = %d\n", min);
+        System.out.printf("Наибольший элемент списка = %d\n", max);
+        System.out.printf("Среднее арифметическое списка = %s\n", format(summ / arr.size()));
+    }
+
+    private static String format(double value) {
+        return NumberFormat.getInstance().format(value);
     }
 }
