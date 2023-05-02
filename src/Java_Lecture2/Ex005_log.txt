@@ -1,0 +1,4 @@
+апр. 29, 2023 10:10:24 PM Java_Lecture2.Ex005_Logger main
+WARNING: Тестовое логирование 1
+апр. 29, 2023 10:10:24 PM Java_Lecture2.Ex005_Logger main
+INFO: Тестовое логирование 2

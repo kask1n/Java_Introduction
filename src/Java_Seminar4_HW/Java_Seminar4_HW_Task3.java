@@ -30,50 +30,36 @@ public class Java_Seminar4_HW_Task3 {
     }
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Введите данные в формате обратной польской записи: ");
-        String input = scan.nextLine();
-        scan.close();
-        String[] arr = input.split(" ");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\nВведите данные в формате обратной польской записи: ");
+        String input = scanner.nextLine();
+        scanner.close();
 
+        String[] arr = input.split(" ");
         System.out.println(Arrays.toString(arr));
 
         Stack<Double> stack = new Stack<>();
-        double res = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (isDigit(arr[i])) {
-                stack.push(Double.parseDouble(arr[i]));
+        for (String s : arr) {
+            if (isDigit(s)) {
+                stack.push(Double.parseDouble(s));
             } else {
-                switch (arr[i]) {
-                    case "+":
-                        res = stack.pop() + stack.pop();
-                        stack.push(res);
-                        break;
-
-                    case "-":
-                        res = -stack.pop() + stack.pop();
-                        stack.push(res);
-                        break;
-
-                    case "*":
-                        res = stack.pop() * stack.pop();
-                        stack.push(res);
-                        break;
-
-                    case "/":
-//                        int temp = stack.pop();
-                        res = (1 / stack.pop()) * stack.pop();
-                        stack.push(res);
-                        break;
+                switch (s) {
+                    case "+" -> stack.push(stack.pop() + stack.pop());
+                    case "-" -> stack.push(-stack.pop() + stack.pop());
+                    case "*" -> stack.push(stack.pop() * stack.pop());
+                    case "/" -> {
+                        if (stack.peek() == 0) {
+                            System.out.println("-> ОШИБКА: Нельзя делить на ноль!");
+                            return;
+                        } else stack.push((1 / stack.pop()) * stack.pop());
+                    }
                 }
             }
         }
 
-        if (stack.size() > 1) {
-            System.out.println("Неправильная запись");
-        } else {
-            System.out.println(format(stack.peek()));
-        }
-
+        if (stack.size() > 1)
+            System.out.println("-> Исходные данные некорректны!");
+        else
+            System.out.printf("-> Ответ: %s\n", format(stack.peek()));
     }
 }

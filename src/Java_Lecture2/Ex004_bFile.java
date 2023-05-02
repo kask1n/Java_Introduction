@@ -1,4 +1,4 @@
-package Lesson_02;
+package Java_Lecture2;
 
 import java.io.*;
 import java.nio.ByteBuffer;
@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Objects;
 
 public class Ex004_bFile {
 
@@ -16,13 +17,13 @@ public class Ex004_bFile {
     static Charset charset = StandardCharsets.UTF_8;
 
     static void loadFile(String path) throws IOException {
-        try (InputStream stream = 
-        new BufferedInputStream(new FileInputStream(path))) {
+        try (InputStream stream =
+                     new BufferedInputStream(new FileInputStream(path))) {
             int n = readInt(stream);
             int b1;
             int b2;
-            byte binWord[];
-            byte binText[];
+            byte[] binWord;
+            byte[] binText;
             for (int i = 0; i < n; i++) {
                 binWord = new byte[readInt(stream)];
                 binText = new byte[readInt(stream)];
@@ -30,8 +31,8 @@ public class Ex004_bFile {
                 b2 = stream.read(binText);
                 if (b1 != binWord.length || b2 != binText.length)
                     throw new IOException("Error read file");
-                data.put(new String(binWord, charset), 
-                         new String(binText, charset));
+                data.put(new String(binWord, charset),
+                        new String(binText, charset));
             }
         }
     }
@@ -41,8 +42,8 @@ public class Ex004_bFile {
             throw new IOException("Nothing to write");
         try (OutputStream stream = new BufferedOutputStream(new FileOutputStream(path, false))) {
             writeInt(stream, data.size());
-            byte binWord[];
-            byte binText[];
+            byte[] binWord;
+            byte[] binText;
             for (Entry<String, String> entry : data.entrySet()) {
                 binWord = entry.getKey().getBytes(charset);
                 writeInt(stream, binWord.length);
@@ -66,14 +67,11 @@ public class Ex004_bFile {
 
     static String find(String word) {
         String out = data.get(word);
-        if (out == null)
-            return "не найдено";
-        else
-            return out;
+        return Objects.requireNonNullElse(out, "не найдено");
     }
 
     static int readInt(InputStream in) throws IOException {
-        byte out[] = new byte[4];
+        byte[] out = new byte[4];
         int i = in.read(out);
         if (i != 4)
             throw new IOException("Error read file");
@@ -87,9 +85,14 @@ public class Ex004_bFile {
     }
 
     public static void main(String[] args) {
-        String file = "test.bin";
+
+        String pathProject = System.getProperty("user.dir");  // Перейти в текущую папку с проектом.
+        String file = pathProject
+                .concat(File.separator).concat("src")  // File.separator для совместимости с разными ОС.
+                .concat(File.separator).concat("Java_Lecture2")
+                .concat(File.separator).concat("Ex004_test.bin");
         //create file
-        
+
         try {
             add("key1", "значение 1");
             add("key2", "значение 2");
@@ -99,7 +102,7 @@ public class Ex004_bFile {
             e.printStackTrace();
         }
         //read file
-        
+
         try {
             loadFile(file);
             String key1 = "key1";

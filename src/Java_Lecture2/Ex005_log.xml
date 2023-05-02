@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-29T19:16:29.733357300Z</date>
+  <millis>1682795789733</millis>
+  <nanos>357300</nanos>
+  <sequence>0</sequence>
+  <logger>Java_Lecture2.Ex005_Logger</logger>
+  <level>WARNING</level>
+  <class>Java_Lecture2.Ex005_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Тестовое логирование 1</message>
+</record>
+<record>
+  <date>2023-04-29T19:16:29.739341400Z</date>
+  <millis>1682795789739</millis>
+  <nanos>341400</nanos>
+  <sequence>1</sequence>
+  <logger>Java_Lecture2.Ex005_Logger</logger>
+  <level>INFO</level>
+  <class>Java_Lecture2.Ex005_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Тестовое логирование 2</message>
+</record>
+</log>
