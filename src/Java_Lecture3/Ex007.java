@@ -1,4 +1,4 @@
-package Lesson_03;
+package Java_Lecture3;
 
 import java.util.*;
 
@@ -13,10 +13,10 @@ public class Ex007 {
         Iterator<Integer> col = list.iterator();
         System.out.println();
 
-        while (col.hasNext()) {
-            col.remove();
+        while (col.hasNext()) {  // Пока есть следующий элемент в коллекции..
+//            col.remove();
             System.out.println(col.next());
-            //col.next();
+//            col.next();
         }
 
     }
