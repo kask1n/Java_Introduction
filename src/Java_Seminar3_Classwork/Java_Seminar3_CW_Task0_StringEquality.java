@@ -1,6 +1,10 @@
+/* Задача 0.
+ * Даны следующие строки, сравните их с помощью == и метода equals() класса Object.
+ */
+
 package Java_Seminar3_Classwork;
 
-public class StringEquality {
+public class Java_Seminar3_CW_Task0_StringEquality {
     public static void main(String[] args) {
         String s1 = "hello";
         String s2 = "hello";

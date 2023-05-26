@@ -21,6 +21,6 @@ public class Java_Seminar1_CW_Task2 {
             } else count = 0;
         }
 
-        System.out.printf("\n-> Максимальное количество подряд идущих 1 = %d\n", maxCount);
+        System.out.printf("\n-> Максимальное количество подряд идущих единиц = %d\n", maxCount);
     }
 }

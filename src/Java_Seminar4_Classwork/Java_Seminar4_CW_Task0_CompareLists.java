@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Java_Seminar2_CW_Task0_CompareLists {
+public class Java_Seminar4_CW_Task0_CompareLists {
     public static void main(String[] args) {
         int SIZE = 10_000_000;
 

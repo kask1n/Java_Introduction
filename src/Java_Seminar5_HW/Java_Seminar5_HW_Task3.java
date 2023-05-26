@@ -14,7 +14,7 @@ public class Java_Seminar5_HW_Task3 {
         System.out.printf("\nИсходный массив:\n%s", Arrays.toString(arr));
 
         heapSort(arr);
-        System.out.printf("\n-> HeapSort:\n%s\nВыполнил:\nСтудент группы 3730\nРябцев А.\n", Arrays.toString(arr));
+        System.out.printf("\n-> HeapSort:\n%s\n", Arrays.toString(arr));
     }
 
     private static void heapSort(int[] arr) {

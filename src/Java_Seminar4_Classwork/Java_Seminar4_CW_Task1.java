@@ -1,9 +1,8 @@
 /* Задача 1.
  * Реализовать консольное приложение, которое в цикле:
- * Принимает от пользователя строку вида
- * text~num
- * Нужно разделить строку по ~, сохранить text в связный список на позицию num.
- * Если введено print~num, выводит строку из позиции num в связном списке и удаляет её из списка.
+ * 1. Принимает от пользователя строку вида text~num
+ * 2. Нужно разделить строку по ~, сохранить text в связный список на позицию num.
+ * 3. Если введено print~num, выводит строку из позиции num в связном списке и удаляет её из списка.
  */
 
 package Java_Seminar4_Classwork;
@@ -12,7 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Java_Seminar2_CW_Task1 {
+public class Java_Seminar4_CW_Task1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in, "866");
 
