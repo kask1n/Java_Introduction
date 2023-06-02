@@ -1,4 +1,4 @@
-package Java_Seminar6_Classwork;/*
+/* Задача 2.
  * 1. Продумайте структуру класса Кот. Какие поля и методы будут актуальны для приложения, которое является
  * а) информационной системой ветеринарной клиники
  * б) архивом выставки котов
@@ -6,26 +6,28 @@ package Java_Seminar6_Classwork;/*
  * Можно записать в текстовом виде, не обязательно реализовывать в java.
  */
 
+package Java_Seminar6_Classwork;
+
 import java.time.LocalDate;
 import java.util.Date;
 
 //поля или названия параметров
 public class VetCat {
     private String name;
-    private String bread;
+    private String breed;
     private String color;
     private String ownerName;
     private LocalDate dateOfBirth;
     private String phone;
-    //private List<Diagonsis> история болезни
+    // private List<Diagonsis> история болезни
     private char sex; // M, F
 
-    //конструктор
+    // Конструктор
 
-    public VetCat(String name, String bread, String color, String ownerName,
+    public VetCat(String name, String breed, String color, String ownerName,
                   LocalDate dateOfBirth, String phone, char sex) {
         this.name = name;
-        this.bread = bread;
+        this.breed = breed;
         this.color = color;
         this.ownerName = ownerName;
         this.dateOfBirth = dateOfBirth;
@@ -33,7 +35,7 @@ public class VetCat {
         this.sex = sex;
     }
 
-    // гет и сет-методы
+    // Get и Set-методы
     public String getName() {
         return name;
     }
@@ -46,11 +48,11 @@ public class VetCat {
     }
 
     public String getBread() {
-        return bread;
+        return breed;
     }
 
-    public void setBread(String bread) {
-        this.bread = bread;
+    public void setBread(String breed) {
+        this.breed = breed;
     }
 
     public String getColor() {
@@ -95,7 +97,7 @@ public class VetCat {
 
     @Override
     public String toString() {
-        return "VetCat [name=" + name + ", bread=" + bread + ", color=" + color + ", ownerName=" + ownerName
+        return "VetCat [name=" + name + ", breed=" + breed + ", color=" + color + ", ownerName=" + ownerName
                 + ", dateOfBirth=" + dateOfBirth + ", phone=" + phone + ", sex=" + sex + "]";
     }
 }

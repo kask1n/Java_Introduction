@@ -9,7 +9,6 @@ public class Magician {
     private String name;
     private int hp;
     private int maxHp;
-
     private int mana;
     private int maxMana;
 
@@ -34,21 +33,21 @@ public class Magician {
 
     public int Attack() {
         int damage = Magician.r.nextInt(20, 30);
-        this.mana -= (int)(damage * 0.8);
+        this.mana -= (int) (damage * 0.8);
         if (mana < 0) return 0;
         else return damage;
     }
 
     public String getInfo() {
-        return String.format("Name: %s  Hp: %d Enegry:  %d Type: %s",
+        return String.format("Name: %s  Hp: %d  Mana: %d  Type: %s",
                 this.name, this.hp, this.mana, this.getClass().getSimpleName());
     }
-    
+
     public void healed(int Hp) {
         this.hp = Hp + this.hp > this.maxHp ? this.maxHp : Hp + this.hp;
     }
 
-    public void GetDamage(int damage) {
+    public void getDamage(int damage) {
         if (this.hp - damage > 0) {
             this.hp -= damage;
         }

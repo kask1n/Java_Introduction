@@ -35,7 +35,6 @@ public class Robot3 {
         if ((name.isEmpty()
                 || Character.isDigit(name.charAt(0)))
                 || Robot3.names.indexOf(name) != -1)
-
         {
             this.name =
              String.format("DefaultName_%d", defaultIndex++);

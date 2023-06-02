@@ -11,7 +11,7 @@ public class Program {
 
     public static void main(String[] args) {
         Point2D a = new Point2D();
-        a.x = 0;
+        a.x = 0;  // Инкапсулирование - перемещение данных в поля класса.
         a.y = 2;
         System.out.println(a.toString());
 
@@ -20,6 +20,6 @@ public class Program {
         b.y = 10;
         System.out.println(b.toString());
         System.out.println(distance(a, b));
-        
+
     }
 }

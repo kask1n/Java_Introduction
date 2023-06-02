@@ -8,18 +8,19 @@
 
 package Java_Seminar6_Classwork;
 
-import java.util.Random;
+import java.util.*;
 
 public class Java_Seminar6_CW_Task1 {
     public static void main(String[] args) {
-        int[] arr = fillArray();
-
+        Integer[] arr = fillArray();
+        System.out.printf("\nДан массив: \n%s", Arrays.toString(arr));
+        proportionOfUnique(arr);
     }
 
-    private static int[] fillArray() {
-        int[] array = new int[1000];
-        Random random = new Random();
+    private static Integer[] fillArray() {
+        Integer[] array = new Integer[1000];
 
+        Random random = new Random();
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(25);
         }
@@ -27,5 +28,8 @@ public class Java_Seminar6_CW_Task1 {
         return array;
     }
 
-
+    private static void proportionOfUnique(Integer[] arr) {
+        Set<Integer> arrSet = new HashSet<>(List.of(arr));  // Заполнение работает только с типом Integer.
+        System.out.printf("\n-> Процент уникальных значений в данном массиве = %.3f%%\n", (float) arrSet.size() * 100 / arr.length);
+    }
 }

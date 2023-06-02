@@ -32,7 +32,7 @@ public class Priest {
         Priest.r.nextInt(50, 150));
     }
 
-    public int Attack() {
+    public int attack() {
         int damage = Priest.r.nextInt(20, 30);
         this.elixir -= (int)(damage * 0.8);
         if (elixir < 0) return 0;
@@ -40,7 +40,7 @@ public class Priest {
     }
 
     public String getInfo() {
-        return String.format("Name: %s  Hp: %d Elixir:  %d Type: %s",
+        return String.format("Name: %s  Hp: %d  Elixir: %d  Type: %s",
                 this.name, this.hp, this.elixir, this.getClass().getSimpleName());
     }
     
@@ -48,7 +48,7 @@ public class Priest {
         this.hp = Hp + this.hp > this.maxHp ? this.maxHp : Hp + this.hp;
     }
 
-    public void GetDamage(int damage) {
+    public void getDamage(int damage) {
         if (this.hp - damage > 0) {
             this.hp -= damage;
         }
