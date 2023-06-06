@@ -13,7 +13,7 @@ public class TextDocument {
     }
 
     public void addAllText(String text){
-        sb.append(text + "\n");
+        sb.append(text).append("\n");
     }
 
     public void addAllLines(String[] lines){

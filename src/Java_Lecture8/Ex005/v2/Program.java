@@ -12,7 +12,7 @@ import Java_Lecture8.Ex005.v2.Warriors.Warrior;
 
 public class Program {
     public static void main(String[] args) {
-        
+
         //#region team1
         List<Hero> team1 = new ArrayList<>();
         team1.add(new Druid());
@@ -26,8 +26,7 @@ public class Program {
 
         if (h instanceof Warrior) {
             ((Warrior) h).attack(null);
-        }
-        else if (h instanceof Healer) {
+        } else if (h instanceof Healer) {
             ((Healer) h).healing(null);
         } else {
             //....
@@ -43,16 +42,18 @@ public class Program {
         team2.get(0).attack(null);
 
         List<Healer> team3 = new ArrayList<>();
-        //team2.add(new Paladin());
+//        team3.add(new Paladin());
         team3.add(new Druid());
         team3.add(new Shaman());
-
         team3.get(0).healing(null);
 
+        team3.add(new God());
+        (team3.get(2)).healing(null);
+
+        Warrior w = ((Warrior) (team3.get(2)));
+        w.attack(null);
 
         //#endregion
-
-
 
     }
 }
