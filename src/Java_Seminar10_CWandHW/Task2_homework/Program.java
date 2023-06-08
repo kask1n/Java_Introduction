@@ -60,5 +60,8 @@ public class Program {
 //        System.out.println(appleBox.compare(orangeBox));
 //        System.out.println(newBox1.compare(newBox2));
 
+//        System.out.println(apple1.equals(apple2));
+//        System.out.println(apple1 == apple2);
+
     }
 }

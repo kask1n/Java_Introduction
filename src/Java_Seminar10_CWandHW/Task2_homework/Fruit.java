@@ -18,6 +18,6 @@ public abstract class Fruit {
 
     @Override
     public int hashCode() {
-        return (int) weight;
+        return super.hashCode();
     }
 }
