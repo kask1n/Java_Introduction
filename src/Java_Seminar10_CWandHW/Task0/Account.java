@@ -1,4 +1,4 @@
-package Java_Seminar10_CWandHW;
+package Java_Seminar10_CWandHW.Task0;
 
 public class Account<T> {
     private final T id;

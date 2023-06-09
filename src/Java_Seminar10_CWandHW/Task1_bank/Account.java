@@ -1,4 +1,4 @@
-package Java_Seminar10_CWandHW.bank;
+package Java_Seminar10_CWandHW.Task1_bank;
 
 public abstract class Account<T extends PersonalData> {
     // Можно предоставить только те типы, которые наследуют интерфейс PersonalData.

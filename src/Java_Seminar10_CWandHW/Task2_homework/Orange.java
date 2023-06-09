@@ -1,4 +1,4 @@
-package Java_Seminar10_CWandHW.homework;
+package Java_Seminar10_CWandHW.Task2_homework;
 
 public class Orange extends Fruit {
     public Orange() {

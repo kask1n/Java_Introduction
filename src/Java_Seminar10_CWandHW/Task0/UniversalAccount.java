@@ -1,4 +1,4 @@
-package Java_Seminar10_CWandHW;
+package Java_Seminar10_CWandHW.Task0;
 
 public class UniversalAccount {
     private final Object id;

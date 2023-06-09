@@ -1,4 +1,4 @@
-package Java_Seminar10_CWandHW.bank;
+package Java_Seminar10_CWandHW.Task1_bank;
 
 public class Transaction<T extends Account<? extends PersonalData>> {
     private final T from;

@@ -1,6 +1,5 @@
-package Java_Seminar10_CWandHW;
+package Java_Seminar10_CWandHW.Task0;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 

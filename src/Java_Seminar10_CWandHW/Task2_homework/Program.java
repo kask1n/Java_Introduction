@@ -6,6 +6,7 @@
 // c. Для хранения фруктов внутри коробки можно использовать ArrayList;
 // d. Сделать метод getWeight(), который высчитывает вес коробки, зная вес одного фрукта и их количество:
 // вес яблока – 1.0f, апельсина – 1.5f (единицы измерения не важны);
+//
 // e. Внутри класса Box сделать метод compare(), который позволяет сравнить текущую коробку с той, которую
 // подадут в compare() в качестве параметра. true – если их массы равны, false в противоположном случае.
 // Можно сравнивать коробки с яблоками и апельсинами;
@@ -14,54 +15,72 @@
 // Соответственно, в текущей коробке фруктов не остается, а в другую перекидываются объекты, которые были в первой;
 // g. Не забываем про метод добавления фрукта в коробку.
 
-package Java_Seminar10_CWandHW.homework;
+package Java_Seminar10_CWandHW.Task2_homework;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
-        Fruit apple1 = new Apple();
-        Fruit apple2 = new Apple();
-        Fruit apple3 = new Apple();
 
+        ArrayList<Fruit> fruits = new ArrayList<>(List.of(
+                new Apple(), new Apple(), new Apple(),
+                new Orange(), new Orange(),
+                new Mango()));
+        System.out.printf("\nСодержимое мешка: %s", fruits);
 
-        Fruit orange1 = new Orange();
-        Fruit orange2 = new Orange();
-        Fruit orange3 = new Orange();
-
-        ArrayList<Fruit> fruits = new ArrayList<>(List.of(apple1, apple2, apple3, orange1, orange2));
+        ArrayList<Box<Fruit>> boxes = new ArrayList<>(
+                List.of(new Box<>(), new Box<>(), new Box<>(), new Box<>(), new Box<>()));
+        System.out.print("\nСодержимое коробок:");
+        for (Box<Fruit> box : boxes)
+            System.out.printf("\n%s", box);
         System.out.println();
-        System.out.println(fruits);
 
-        Box<Fruit> appleBox = new Box<>();
-        Box<Fruit> orangeBox = new Box<>();
+        Set<String> fruitTypes = new HashSet<>();
+        for (Fruit fruit : fruits)
+            fruitTypes.add(fruit.getClass().getSimpleName());
 
-        for (Fruit fruit : fruits) {
-            if (fruit instanceof Apple) {
-                appleBox.add(fruit);
-//                fruits.remove(fruit);
-            } else if (fruit instanceof Orange) {
-                orangeBox.add(fruit);
-//                fruits.remove(fruit);
+        for (String type : fruitTypes) {
+            for (Box<Fruit> box : boxes) {
+
+                Iterator<Fruit> iFruits = fruits.iterator();
+                while (iFruits.hasNext()) {
+                    if (box.addFruit(iFruits.next()))
+                        iFruits.remove();
+                }
             }
         }
 
-//        System.out.println(appleBox.getBoxWeight());
-//        System.out.println(orangeBox.getBoxWeight());
+        System.out.println();
+        System.out.printf("\nСодержимое мешка: %s", fruits);
+        System.out.print("\nСодержимое коробок:");
+        for (Box<Fruit> box : boxes)
+            System.out.printf("\n%s", box);
+        System.out.println();
 
-        System.out.println(appleBox);
-        System.out.println(orangeBox);
+        fruits.add(boxes.get(0).removeFruit());
+        System.out.print(boxes.get(0));
+        System.out.printf("\nСодержимое мешка: %s", fruits);
+    }
 
-        Box<Fruit> newBox1 = new Box<>();
-        Box<Fruit> newBox2 = new Box<>();
-//        System.out.println(newBox1.getBoxWeight());
+//        box2.removeFruit();
+//        box2.removeFruit();
+//
+//        System.out.println(box2);
+//        box2.addFruit(apple1);
 
-//        System.out.println(appleBox.compare(orangeBox));
-//        System.out.println(newBox1.compare(newBox2));
+//        System.out.println(box1.getBoxWeight());
+//        System.out.println(box2.getBoxWeight());
+
+//        System.out.println(box1);
+//        System.out.println(box2);
+
+
+//        System.out.println(box3.getBoxWeight());
+
+//        System.out.println(box1.compare(box2));
+//        System.out.println(box3.compare(box4));
 
 //        System.out.println(apple1.equals(apple2));
 //        System.out.println(apple1 == apple2);
 
-    }
 }

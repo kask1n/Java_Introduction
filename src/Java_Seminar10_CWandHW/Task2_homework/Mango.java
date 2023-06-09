@@ -1,12 +1,12 @@
 package Java_Seminar10_CWandHW.Task2_homework;
 
-public class Apple extends Fruit {
-    public Apple() {
-        super(1.0f);
+public class Mango extends Fruit {
+    public Mango() {
+        super(2.0f);
     }
 
     @Override
     public String toString() {
-        return "Яблоко";
+        return "Манго";
     }
 }

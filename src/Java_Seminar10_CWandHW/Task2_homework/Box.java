@@ -1,4 +1,4 @@
-package Java_Seminar10_CWandHW.homework;
+package Java_Seminar10_CWandHW.Task2_homework;
 
 import java.util.ArrayList;
 
@@ -36,14 +36,32 @@ public class Box<F extends Fruit> {
         return contents.size() * contents.get(0).getWeight();
     }
 
-    public void add(F fruit) {
-        if (contents.isEmpty() || contents.contains(fruit))
-            contents.add(fruit);
-        else
-            System.out.println("В коробке находятся другие фрукты.");
+    public boolean addFruit(F fruit) {
+        if (contents.isEmpty() || contents.get(0).getClass().equals(fruit.getClass())) {
+            if (!contents.contains(fruit)) {
+                contents.add(fruit);
+                System.out.printf("\nBox #%d: Добавлен фрукт -> %s", this.getIdentificator(), fruit);
+                return true;
+            } else {
+                System.out.printf("\nBox #%d: Попытка дважды добавить в коробку один и тот же объект -> %s",
+                        this.getIdentificator(), fruit);
+                return false;
+            }
+        } else {
+            System.out.printf("\nBox #%d: Нельзя добавить -> %s, т.к. в коробке уже есть %s.",
+                    this.getIdentificator(), fruit, contents.get(0));
+            return false;
+        }
     }
 
-
+    public F removeFruit() {
+        if (!contents.isEmpty()) {
+            F target = contents.remove(0);  // Вытащить ближайший фрукт (первый из списка).
+            System.out.printf("\nBox #%d: Из коробки вытащили -> %s\n", this.getIdentificator(), target);
+            return target;
+        }
+        return null;
+    }
 
     @Override
     public String toString() {

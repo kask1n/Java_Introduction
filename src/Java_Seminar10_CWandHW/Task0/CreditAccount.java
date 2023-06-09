@@ -1,4 +1,4 @@
-package Java_Seminar10_CWandHW;
+package Java_Seminar10_CWandHW.Task0;
 
 public class CreditAccount implements Accountable<AccountIdentifier> {
     // Из обобщённого интерфейса перешли в необобщённый класс.

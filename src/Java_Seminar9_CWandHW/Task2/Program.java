@@ -12,11 +12,19 @@ public class Program {
      *
      * @return
      */
-    static Worker generateEmployee() {
-        String[] names = new String[]{"Анатолий", "Глеб", "Григорий"};
-        String[] surnames = new String[]{"Григорьев", "Глебов", "Попов"};
-        int salary = random.nextInt(20000, 80000);
-        return new Worker(names[random.nextInt(names.length)], surnames[random.nextInt(surnames.length)], salary);
+    static Employee generateEmployee() {
+        String[] names = new String[]{"Анатолий", "Глеб", "Клим",
+                "Мартин", "Лазарь", "Владлен", "Клим", "Панкратий", "Рубен", "Герман"};
+        String[] surnames = new String[]{"Григорьев", "Фокин", "Шестаков",
+                "Хохлов", "Шубин", "Бирюков", "Копылов", "Горбунов", "Лыткин", "Соколов"};
+        if (random.nextBoolean()) {
+            return new Worker(names[random.nextInt(names.length)], surnames[random.nextInt(surnames.length)],
+                    random.nextInt(20000, 80000), random.nextInt(18, 60));
+        } else {
+            return new Freelancer(names[random.nextInt(names.length)], surnames[random.nextInt(surnames.length)],
+                    random.nextInt(18, 60), random.nextInt(125, 500),
+                    random.nextInt(160));
+        }
     }
 
     /**
@@ -34,25 +42,34 @@ public class Program {
         for (int i = 0; i < employees.length; i++)
             employees[i] = generateEmployee();
 
+        System.out.println("\n-> ИСХОДНЫЙ СПИСОК:");
         for (Employee employee : employees)
             System.out.println(employee);
-        System.out.println();
 
 //        Arrays.sort(employees);
+        System.out.println("\n-> СОРТИРОВКА ПО УМЕНЬШЕНИЮ ОПЛАТЫ ТРУДА:");
         Arrays.sort(employees, new SalaryComparator());
-
-
-
-//        for (int i = 0; i < employees.length; i++) {
-//
-//        }
-//
-//        for (Employee employee : employees) {
-//            salaryComparator1.compare(employee);
-//        }
-
         for (Employee employee : employees)
             System.out.println(employee);
 
+        System.out.println("\n-> СОРТИРОВКА ПО УВЕЛИЧЕНИЮ ВОЗРАСТА:");
+        Arrays.sort(employees, new AgeComparator());
+        for (Employee employee : employees)
+            System.out.println(employee);
+
+        System.out.println("\n-> СОРТИРОВКА ПО ФАМИЛИИ И УВЕЛИЧЕНИЮ ВОЗРАСТА:");
+        Arrays.sort(employees, new SurnameAgeComparator());
+        for (Employee employee : employees)
+            System.out.println(employee);
+
+        System.out.println("\n-> СОРТИРОВКА ПО ФАМИЛИИ И ИМЕНИ:");
+        Arrays.sort(employees, new SurnameNameComparator());
+        for (Employee employee : employees)
+            System.out.println(employee);
+
+        System.out.println("\n-> СОРТИРОВКА ПО УВЕЛИЧЕНИЮ ВОЗРАСТА И ЗАРАБОТНОЙ ПЛАТЫ:");
+        Arrays.sort(employees, new AgeSalaryComparator());
+        for (Employee employee : employees)
+            System.out.println(employee);
     }
 }

@@ -1,5 +1,4 @@
-/* Группа 3730, Рябцев А.
- * Домашняя работа 5. Задача 1.
+/* Домашняя работа 5. Задача 1.
  *
  * Реализуйте структуру телефонной книги с помощью HashMap,
  * учитывая, что 1 человек может иметь несколько телефонов.
@@ -19,7 +18,6 @@ public class Java_Seminar5_HW_Task1 {
 
         System.out.println();
         System.out.println(phonebook);
-        System.out.print("Выполнил:\nСтудент группы 3730\nРябцев А.\n");
     }
 
     static Map<String, List<Integer>> phonebook = new HashMap<>();

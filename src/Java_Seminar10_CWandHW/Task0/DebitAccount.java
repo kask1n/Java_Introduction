@@ -1,4 +1,4 @@
-package Java_Seminar10_CWandHW;
+package Java_Seminar10_CWandHW.Task0;
 
 public class DebitAccount<T> implements Accountable<T> {
     // Протягиваем обобщённый интерфейс на обобщённый класс.

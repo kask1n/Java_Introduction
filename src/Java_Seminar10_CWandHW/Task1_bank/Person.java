@@ -1,4 +1,4 @@
-package Java_Seminar10_CWandHW.bank;
+package Java_Seminar10_CWandHW.Task1_bank;
 
 public class Person implements PersonalData {
     private final String fio;

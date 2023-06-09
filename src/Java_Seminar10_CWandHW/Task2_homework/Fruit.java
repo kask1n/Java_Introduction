@@ -1,4 +1,7 @@
-package Java_Seminar10_CWandHW.homework;
+package Java_Seminar10_CWandHW.Task2_homework;
+
+import java.util.Iterator;
+import java.util.function.Consumer;
 
 public abstract class Fruit {
     private final float weight;
@@ -11,13 +14,4 @@ public abstract class Fruit {
         return weight;
     }
 
-    public boolean equals(Fruit f) {
-        return this.getClass().getSimpleName() == f.getClass().getSimpleName();
-        // Одинаковый класс = Одинаковые экземпляры.
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
 }
