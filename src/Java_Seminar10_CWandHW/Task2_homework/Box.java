@@ -1,6 +1,7 @@
 package Java_Seminar10_CWandHW.Task2_homework;
 
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 public class Box<F extends Fruit> {
     private final ArrayList<F> contents;
@@ -37,18 +38,18 @@ public class Box<F extends Fruit> {
     }
 
     public boolean addFruit(F fruit) {
-        if (contents.isEmpty() || contents.get(0).getClass().equals(fruit.getClass())) {
+        if (this.isPossibleAddTo(fruit, this)) {
             if (!contents.contains(fruit)) {
                 contents.add(fruit);
-                System.out.printf("\nBox #%d: Добавлен фрукт -> %s", this.getIdentificator(), fruit);
+                System.out.printf("Box #%d: Добавлен фрукт -> %s\n", this.getIdentificator(), fruit);
                 return true;
             } else {
-                System.out.printf("\nBox #%d: Попытка дважды добавить в коробку один и тот же объект -> %s",
+                System.out.printf("Box #%d: Попытка дважды добавить в коробку один и тот же объект -> %s.\n",
                         this.getIdentificator(), fruit);
                 return false;
             }
         } else {
-            System.out.printf("\nBox #%d: Нельзя добавить -> %s, т.к. в коробке уже есть %s.",
+            System.out.printf("Box #%d: Нельзя добавить -> %s, т.к. в коробке уже есть %s.\n",
                     this.getIdentificator(), fruit, contents.get(0));
             return false;
         }
@@ -57,19 +58,54 @@ public class Box<F extends Fruit> {
     public F removeFruit() {
         if (!contents.isEmpty()) {
             F target = contents.remove(0);  // Вытащить ближайший фрукт (первый из списка).
-            System.out.printf("\nBox #%d: Из коробки вытащили -> %s\n", this.getIdentificator(), target);
+            System.out.printf("Box #%d: Из коробки вытащили фрукт -> %s\n", this.getIdentificator(), target);
             return target;
         }
-        return null;
+        String message = String.format("Box #%d: Коробка пуста.", this.getIdentificator());
+        throw new NoSuchElementException(message);
+    }
+
+    public void moveTo(int count, Box<F> targetBox) {
+        if (this.contents.isEmpty()) {
+            System.out.printf("-> В коробке #%d нет фруктов для извлечения.\n", this.getIdentificator());
+            return;
+        }
+
+        if (count > this.contents.size()) {
+            count = this.contents.size();
+            System.out.printf("-> Из коробки #%d можно извлечь не более %d фрукт%s.\n",
+                    this.getIdentificator(), count, count == 1 ? "а" : "ов");
+        }
+
+        for (int i = 0; i < count; i++)
+            if (isPossibleAddTo(this.contents.get(0), targetBox)) // Проверка на возможность добавления и только потом удаление.
+                targetBox.addFruit(this.removeFruit());
+            else
+                System.out.printf("Невозможно переместить %s в коробку #%d.\n",
+                        this.contents.get(0), targetBox.getIdentificator());
+    }
+
+    private boolean isPossibleAddTo(F f, Box<F> o) {
+        return o.contents.isEmpty() || o.contents.get(0).getClass().equals(f.getClass());
     }
 
     @Override
     public String toString() {
         return "Box #" + identificator +
-                ": " + contents;
+                ": " + contents + "\n";
     }
 
     public boolean compare(Box<F> o) {
-        return this.getBoxWeight() == o.getBoxWeight();
+        System.out.printf("Коробки #%d и #%d ",
+                this.getIdentificator(), o.getIdentificator());
+
+        if (this.getBoxWeight() == o.getBoxWeight()) {
+            System.out.println("имеют одинаковую массу (true).");
+            return true;
+        } else {
+            System.out.println("различаются по массе (false).");
+            return false;
+        }
     }
+
 }

@@ -26,61 +26,63 @@ public class Program {
                 new Apple(), new Apple(), new Apple(),
                 new Orange(), new Orange(),
                 new Mango()));
-        System.out.printf("\nСодержимое мешка: %s", fruits);
+        System.out.printf("\nСодержимое корзины: %s", fruits);
 
         ArrayList<Box<Fruit>> boxes = new ArrayList<>(
                 List.of(new Box<>(), new Box<>(), new Box<>(), new Box<>(), new Box<>()));
-        System.out.print("\nСодержимое коробок:");
+        System.out.println("\n-> СОДЕРЖИМОЕ КОРОБОК:");
         for (Box<Fruit> box : boxes)
-            System.out.printf("\n%s", box);
-        System.out.println();
+            System.out.printf("%s", box);
+        System.out.println("--------------------");
 
-        Set<String> fruitTypes = new HashSet<>();
-        for (Fruit fruit : fruits)
-            fruitTypes.add(fruit.getClass().getSimpleName());
+        for (Box<Fruit> box : boxes) {
+            if (fruits.isEmpty())
+                break;
 
-        for (String type : fruitTypes) {
-            for (Box<Fruit> box : boxes) {
-
-                Iterator<Fruit> iFruits = fruits.iterator();
-                while (iFruits.hasNext()) {
-                    if (box.addFruit(iFruits.next()))
-                        iFruits.remove();
-                }
-            }
+            fruits.removeIf(box::addFruit);
+//            Iterator<Fruit> iFruits = fruits.iterator();
+//            while (iFruits.hasNext()) {
+//                if (box.addFruit(iFruits.next()))
+//                    iFruits.remove();
+//            }
         }
 
-        System.out.println();
-        System.out.printf("\nСодержимое мешка: %s", fruits);
-        System.out.print("\nСодержимое коробок:");
+        System.out.printf("\nСодержимое корзины: %s", fruits);
+        System.out.println("\n-> СОДЕРЖИМОЕ КОРОБОК:");
         for (Box<Fruit> box : boxes)
-            System.out.printf("\n%s", box);
-        System.out.println();
+            System.out.printf("%s", box);
+        System.out.println("--------------------");
 
         fruits.add(boxes.get(0).removeFruit());
         System.out.print(boxes.get(0));
-        System.out.printf("\nСодержимое мешка: %s", fruits);
+        System.out.printf("Содержимое корзины: %s", fruits);
+        System.out.println("\n--------------------");
+
+        boxes.get(0).moveTo(5, boxes.get(3));
+        boxes.get(0).moveTo(1, boxes.get(3));
+        System.out.print(boxes.get(0));
+        System.out.print(boxes.get(3));
+
+        System.out.println();
+        System.out.printf("Масса коробки #%d составляет %.1f кг.\n", boxes.get(0).getIdentificator(), boxes.get(0).getBoxWeight());
+        System.out.printf("Масса коробки #%d составляет %.1f кг.\n", boxes.get(2).getIdentificator(), boxes.get(2).getBoxWeight());
+        System.out.printf("Масса коробки #%d составляет %.1f кг.\n", boxes.get(3).getIdentificator(), boxes.get(3).getBoxWeight());
+        boxes.get(0).compare(boxes.get(3));
+        boxes.get(2).compare(boxes.get(3));
+
+        System.out.printf("\nСодержимое корзины: %s", fruits);
+        System.out.println("\n-> СОДЕРЖИМОЕ КОРОБОК:");
+        for (Box<Fruit> box : boxes)
+            System.out.printf("%s", box);
+        System.out.println("--------------------");
+
+        boxes.get(1).moveTo(1, boxes.get(2)); // Попытка переместить 1 фрукт из коробки #2 в коробку #3.
+
+        System.out.printf("\nСодержимое корзины: %s", fruits);
+        System.out.println("\n-> СОДЕРЖИМОЕ КОРОБОК:");
+        for (Box<Fruit> box : boxes)
+            System.out.printf("%s", box);
+        System.out.println("--------------------");
+
     }
-
-//        box2.removeFruit();
-//        box2.removeFruit();
-//
-//        System.out.println(box2);
-//        box2.addFruit(apple1);
-
-//        System.out.println(box1.getBoxWeight());
-//        System.out.println(box2.getBoxWeight());
-
-//        System.out.println(box1);
-//        System.out.println(box2);
-
-
-//        System.out.println(box3.getBoxWeight());
-
-//        System.out.println(box1.compare(box2));
-//        System.out.println(box3.compare(box4));
-
-//        System.out.println(apple1.equals(apple2));
-//        System.out.println(apple1 == apple2);
-
 }
