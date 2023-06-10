@@ -32,13 +32,13 @@ public class Box<F extends Fruit> {
 //    }
 
     public float getBoxWeight() {
-        if (contents.size() == 0)
+        if (contents.isEmpty())
             return 0;
         return contents.size() * contents.get(0).getWeight();
     }
 
     public boolean addFruit(F fruit) {
-        if (this.isPossibleAddTo(fruit, this)) {
+        if (isPossibleAddTo(fruit, this)) {
             if (!contents.contains(fruit)) {
                 contents.add(fruit);
                 System.out.printf("Box #%d: Добавлен фрукт -> %s\n", this.getIdentificator(), fruit);
