@@ -7,7 +7,7 @@ public class Coffee extends Beverage {
     @Override
     public Iterator<Ingredient> iterator() {
 
-        Iterator<Ingredient> it = new Iterator<Ingredient>() {
+        Iterator<Ingredient> it = new Iterator<>() {
 
             private int index = 0;
 

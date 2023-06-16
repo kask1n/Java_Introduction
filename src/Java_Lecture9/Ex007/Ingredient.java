@@ -15,6 +15,7 @@ public abstract class Ingredient {
     @Override
     public boolean equals(Object obj) {  // Переопределение equals для сравнения в классе Beverage.
         Ingredient t = (Ingredient) obj;
-        return t.brand == this.brand;
+//        return this.brand == t.brand;
+        return this.brand.equals(t.brand);
     }
 }

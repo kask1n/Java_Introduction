@@ -15,7 +15,8 @@ public abstract class Beverage
 
     public void addComponent(Ingredient component) {
 
-        if (!(components.indexOf(component) != -1))  // Если не нашли такой компонент, то добавляем его.
+//        if (!(components.indexOf(component) != -1))
+        if (!components.contains(component))  // Если не нашли такой компонент, то добавляем его.
             components.add(component);
     }
 }
