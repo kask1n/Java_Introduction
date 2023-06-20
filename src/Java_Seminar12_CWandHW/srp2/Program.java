@@ -7,6 +7,7 @@ package Java_Seminar12_CWandHW.srp2;
 public class Program {
     public static void main(String[] args) {
 
+        System.out.println();
         Order order = new Order();  // По умолчанию создаётся Order("", "", 0, 0).
         Inputer inputer = new Inputer();
         Saver saver = new Saver();

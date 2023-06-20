@@ -11,6 +11,7 @@ public class Inputer implements Inputable {
         o.setProduct(prompt("Продукт: "));
         o.setQnt(Integer.parseInt(prompt("Кол-во: ")));
         o.setPrice(Integer.parseInt(prompt("Цена: ")));
+        System.out.printf("-> Создан заказ #%d на имя %s\n", o.getId(), o.getClientName());
     }
 
     @Override
