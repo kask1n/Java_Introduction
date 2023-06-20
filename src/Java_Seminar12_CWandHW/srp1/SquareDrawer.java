@@ -26,14 +26,16 @@ public class SquareDrawer {
         this.square = square;
     }
 
-    public void draw(){
+    public void draw() {
         for (int i = 0; i < square.getSide() * scale * 2; i++) {
+            // * 2, чтобы красивее смотрелось в терминале (стандартный межстрочный интервал примерно равено одному символу в строке).
             System.out.print("*");
         }
         System.out.println();
-        for (int i = 0; i < square.getSide() * scale -2; i++) {
+        for (int i = 0; i < square.getSide() * scale - 2; i++) {
+            // На 2 символа меньше, т.к. верхняя и нижняя сторона рисуются отдельно (расходуется по 1 символу на каждую).
             System.out.print("*");
-            for (int j = 1; j < square.getSide() * scale * 2 - 1; j++) {
+            for (int j = 1; j < square.getSide() * scale * 2 - 1; j++) {  // Внутри квадрата всё заполняется пробелами.
                 System.out.print(" ");
             }
             System.out.println("*");
@@ -42,7 +44,6 @@ public class SquareDrawer {
             System.out.print("*");
         }
     }
-
 
 
 }

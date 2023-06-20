@@ -1,3 +1,5 @@
+package Java_Lecture10.Ex005;
+
 import java.util.Random;
 
 class Ex003_GenericMethod {
@@ -15,6 +17,6 @@ class GenericMethod {
     public static <T> T Swap(T arg1, T arg2) {
         int t = random.nextInt(2);
         return t == 0 ? arg1 : arg2;
-        // var res = arg1+arg2;
+//        var res = arg1 + arg2;
     }
 }

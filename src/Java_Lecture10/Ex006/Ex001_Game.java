@@ -1,4 +1,4 @@
-package Ex006;
+package Java_Lecture10.Ex006;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +11,13 @@ public class Ex001_Game {
 
         Team team1 = new Team("Воробушки");
         team1.add(Gb.CreateEmployee(0));
-        team1.add(Gb.CreateEmployee(0));
+        team1.add(Gb.CreateEmployee());
         System.out.println(team1);
 
         Team team2 = new Team("Хлебушки ");
         team2.add(Gb.CreateEmployee(0));
-        team2.add(Gb.CreateEmployee(0));
-        team2.add(Gb.CreateEmployee(1));//
+        team2.add(Gb.CreateEmployee(10));
+        team2.add(Gb.CreateEmployee(1));  //
         System.out.println(team2);
 
         var o = new Olympiad(team1, team2);
@@ -27,8 +27,8 @@ public class Ex001_Game {
 }
 
 abstract class Programmer {
-    private String fullName;
-    private int age;
+    private final String fullName;
+    private final int age;
 
     public Programmer() {
         Random r = new Random();
@@ -71,8 +71,8 @@ class Principal extends Programmer {
 }
 
 class Team {
-    private String name;
-    private List<Programmer> programmers;
+    private final String name;
+    private final List<Programmer> programmers;
 
     public Team(String name) {
         this.name = name;
@@ -106,21 +106,22 @@ class Olympiad {
 
     public void start() {
         String winner = r.nextInt(2) == 0 ? team1.getName() : team2.getName();
-        System.out.println(String.format("Winner: %s", winner));
+        System.out.printf("Winner: %s%n", winner);
     }
 }
 
 class Gb {
 
     public static Programmer CreateEmployee(int i) {
-        switch (i) {
-            case 0:
-                return new Intern();
-            case 1:
-                return new Middle();
-            default:
-                return new Principal();
-        }
+        return switch (i) {
+            case 0 -> new Intern();
+            case 1 -> new Middle();
+            default -> new Principal();
+        };
+    }
+
+    public static Programmer CreateEmployee() {
+        return CreateEmployee(0);
     }
 
 }

@@ -9,6 +9,7 @@ public class Program {
         latte.addComponent(new Water("Вода"));
         latte.addComponent(new Water("Вода"));
         latte.addComponent(new Water("Вода"));
+
         for (var ingredient : latte) {
             System.err.println(ingredient);
         }

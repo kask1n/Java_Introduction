@@ -6,8 +6,7 @@ import java.util.List;
 
 public class Program {
     public static void main(String[] args) {
-        List<Integer> data = new ArrayList<>(Arrays.asList(1,2,3,4));
-        
+        List<Integer> data = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 
         var el = Methods.getElementFromIntegerCollection(data, 1);
         System.out.println(el);

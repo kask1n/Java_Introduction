@@ -1,11 +1,15 @@
+package Java_Lecture10.Ex005;
 
 public class Ex002_MultiPair {
     public static void main(String[] args) {
         MultiPair<Integer, String> mp1 = new MultiPair<>(123, "str");
         System.out.println(mp1);
+        System.out.println(mp1.getX().getClass().getSimpleName() + " " + mp1.getY().getClass().getSimpleName());
 
+        System.out.println();
         var mp2 = new MultiPair<>(true, false);
         System.out.println(mp2);
+        System.out.println(mp2.getX().getClass().getSimpleName() + " " + mp2.getY().getClass().getSimpleName());
 
     }
 }

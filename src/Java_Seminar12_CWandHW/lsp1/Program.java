@@ -31,6 +31,7 @@ public class Program {
 
         processBirdsFly(birds);
 
+//        penguin1.fly();
     }
 
     /**

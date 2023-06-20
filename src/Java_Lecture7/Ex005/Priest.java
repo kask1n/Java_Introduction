@@ -1,6 +1,7 @@
 package Java_Lecture7.Ex005;
 
 import java.util.Random;
+
 public class Priest {
     private static final String HERO_PRIEST_D = "Hero_Priest #%d";
     private static int number;

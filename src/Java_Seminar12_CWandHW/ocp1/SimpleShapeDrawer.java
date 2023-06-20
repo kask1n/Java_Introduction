@@ -12,11 +12,11 @@ public class SimpleShapeDrawer {
     }
 
     private void drawSquare(){
-        //TODO: Отрисовка квадрата
+        //...
     }
 
     private void drawCircle(){
-        //TODO: Отрисовка окружности
+        //...
     }
 
     private void drawTriangle(){

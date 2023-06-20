@@ -1,4 +1,4 @@
-package Ex007;
+package Java_Lecture10.Ex007;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +21,12 @@ public class Ex002_Game {
 
         var o = new Olympiad<Intern>(team1, team2);
         o.start();
-        System.out.println("st1 vs st2");
 
         // #region
+        System.out.println();
+        System.out.println("st1 vs st2");
         var st1 = new Team<String>("string team 1");
-        var st2 = new Team<String>("string team 1");
+        var st2 = new Team<String>("string team 2");
 
         Olympiad<String> o1 = new Olympiad<>(st1, st2);
         o1.start();
@@ -35,8 +36,8 @@ public class Ex002_Game {
 }
 
 abstract class Programmer {
-    private String fullName;
-    private int age;
+    private final String fullName;
+    private final int age;
 
     public Programmer() {
         Random r = new Random();
@@ -79,8 +80,8 @@ class Principal extends Programmer {
 }
 
 class Team<T> {
-    private String name;
-    private List<T> programmers;
+    private final String name;
+    private final List<T> programmers;
 
     public Team(String name) {
         this.name = name;
@@ -114,7 +115,7 @@ class Olympiad<T> {
 
     public void start() {
         String winner = r.nextInt(2) == 0 ? team1.getName() : team2.getName();
-        System.out.println(String.format("Winner: %s", winner));
+        System.out.printf("Winner: %s%n", winner);
     }
 }
 
