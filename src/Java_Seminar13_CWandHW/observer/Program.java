@@ -14,9 +14,9 @@ public class Program {
 
         JobAgency jobAgency = new JobAgency();
 
-        Vacancy cleaner = new Vacancy("Уборщик", 7000, TypeVacancy.GarbageCollector);
+        Vacancy cleaner = new Vacancy("Сборщик мусора", 7000, TypeVacancy.GarbageCollector);
         Vacancy programmerJava = new Vacancy("Программист Java", 90000, TypeVacancy.Programmer);
-        Vacancy master = new Vacancy("Аналитик БД", 50000, TypeVacancy.Master);
+        Vacancy master = new Vacancy("Мастер строительных работ", 50000, TypeVacancy.Master);
         Vacancy pentester = new Vacancy("Пентестер", 150000, TypeVacancy.Hacker);
 
         // Варианты создания экземпляра класса:

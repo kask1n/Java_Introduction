@@ -20,19 +20,19 @@ public class Master implements Observer {
     public void receiveOffer(String nameCompany, Vacancy vacancy) {
         if (typeVacancy == vacancy.getTypeVacancy()) {
             if (minSalary > vacancy.getSalary()) {
-                System.out.printf("Мастер %s (%.2f) >>> Я найду работу получше! (%s %s - %.2f)\n",
-                        name, minSalary, nameCompany, vacancy.getNameVacancy(), vacancy.getSalary());
+                System.out.printf("%s %s (%.2f) >>> Я найду работу получше! (%s %s - %.2f)\n",
+                        typeVacancy, name, minSalary, nameCompany, vacancy.getNameVacancy(), vacancy.getSalary());
             } else {
                 if (minSalary < vacancy.getSalary())
                     minSalary = vacancy.getSalary();
 
-                System.out.printf("Мастер %s (%.2f) >>> Мне нужна эта работа! (%s %s - %.2f)\n",
-                        name, minSalary, nameCompany, vacancy.getNameVacancy(), vacancy.getSalary());
+                System.out.printf("%s %s (%.2f) >>> Мне нужна эта работа! (%s %s - %.2f)\n",
+                        typeVacancy, name, minSalary, nameCompany, vacancy.getNameVacancy(), vacancy.getSalary());
             }
         }
         else {
-            System.out.printf("Мастер %s %s (%.2f) >>> Мне не подходит вакансия %s от компании %s\n",
-                    name, typeVacancy, minSalary, vacancy.getNameVacancy(), nameCompany);
+            System.out.printf("%s %s (%.2f) >>> Мне не подходит вакансия %s от компании %s\n",
+                    typeVacancy, name, minSalary, vacancy.getNameVacancy(), nameCompany);
         }
     }
 }

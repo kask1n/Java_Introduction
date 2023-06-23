@@ -17,13 +17,13 @@ public class Student implements Observer {
     @Override
     public void receiveOffer(String nameCompany, Vacancy vacancy) {
         if (minSalary > vacancy.getSalary()) {
-            System.out.printf("Студент %s (%.2f) >>> Я найду работу получше! (%s %s - %.2f)\n",
+            System.out.printf("Student %s (%.2f) >>> Я найду работу получше! (%s %s - %.2f)\n",
                     name, minSalary, nameCompany, vacancy.getNameVacancy(), vacancy.getSalary());
         } else {
             if (minSalary < vacancy.getSalary())
                 minSalary = vacancy.getSalary();
 
-            System.out.printf("Студент %s (%.2f) >>> Мне нужна эта работа! (%s %s - %.2f)\n",
+            System.out.printf("Student %s (%.2f) >>> Мне нужна эта работа! (%s %s - %.2f)\n",
                     name, minSalary, nameCompany, vacancy.getNameVacancy(), vacancy.getSalary());
         }
     }
