@@ -32,4 +32,5 @@ public class Settings {
             instance = new Settings();
         return instance;
     }
+
 }
