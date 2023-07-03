@@ -1,6 +1,6 @@
 package Java_Lecture11.Ex003Math.Core.Presenters;
 
- 
+
 import Java_Lecture11.Ex003Math.Core.Infrastructure.Generator;
 import Java_Lecture11.Ex003Math.Core.Models.Model;
 import Java_Lecture11.Ex003Math.Core.Views.View;
@@ -23,16 +23,13 @@ public class Presenter {
         String response = view.get();
         Shape figure;
 
-        switch (response) {
-            case "1":
-                figure = Circle.create(Generator.number(), "Circle_" + Generator.number());
-                break;
-            default:
-                figure = Rectangle.create(
+        if (response.equals("1")) {
+            figure = Circle.create(Generator.number(), "Circle_" + Generator.number());
+        } else {
+            figure = Rectangle.create(
                     Generator.number(),
                     Generator.number(),
                     "Rectangle_" + Generator.number());
-                break;
         }
 
         model.append(figure);
@@ -44,8 +41,7 @@ public class Presenter {
         view.set(model.show());
     }
 
-    public void showArea()
-        {
-            view.set(String.format("all Area %s", model.area()));
-        }
+    public void showArea() {
+        view.set(String.format("all Area %s", model.area()));
+    }
 }

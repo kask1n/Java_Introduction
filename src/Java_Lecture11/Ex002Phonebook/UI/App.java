@@ -8,10 +8,11 @@ import Java_Lecture11.Ex002Phonebook.Core.MVP.View;
 
 public class App {
     public static void ButtonClick() {
-        System.out.print("\033[H\033[J");// ru.stackoverflow.com/questions/1315049/Как-очистить-консоль-в-java-во-время-действия-программы
+        System.out.print("\033[H\033[J");
+        // ru.stackoverflow.com/questions/1315049/Как-очистить-консоль-в-java-во-время-действия-программы
         View view = new NewConsoleView();
         Presenter presenter = new Presenter(view, Config.pathDb);
-        presenter.LoadFromFile();
+        presenter.loadFromFile();
 
         try (Scanner in = new Scanner(System.in)) {
 
@@ -20,16 +21,9 @@ public class App {
                 String key = in.next();
                 System.out.print("\033[H\033[J");
                 switch (key) {
-                    case "1":
-                        presenter.prev();
-                        break;
-                    case "2":
-                        presenter.next();
-                        break;
-
-                    default:
-                        System.out.println("Такой команды нет");
-                        break;
+                    case "1" -> presenter.prev();
+                    case "2" -> presenter.next();
+                    default -> System.out.println("Такой команды нет");
                 }
             }
         }

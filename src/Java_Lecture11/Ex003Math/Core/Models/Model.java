@@ -9,7 +9,7 @@ public class Model {
     Calculate calc;
 
     public Model(Calculate c, String canvasName) {
-        panel = new Canvas(canvasName);//"Без имени (2).jpg");
+        panel = new Canvas(canvasName);  // "Без имени (2).jpg";
         calc = c;
     }
 

@@ -29,17 +29,12 @@ public class App {
         while (true) {
             ui.set(sb.toString());
             switch (ui.get()) {
-                case "1":
-                    p.append();
-                    break;
-                case "2":
-                    p.show();
-                    break;
-                case "3":
-                    p.showArea();
-                    break;
-                case "0":
+                case "1" -> p.append();
+                case "2" -> p.show();
+                case "3" -> p.showArea();
+                case "0" -> {
                     return;
+                }
             }
         }
     }

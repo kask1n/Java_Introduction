@@ -3,12 +3,13 @@ package Java_Lecture11.Ex002Phonebook.Core.Infrastructure;
 import java.util.ArrayList;
 import java.util.List;
 
+import Java_Lecture11.Ex002Phonebook.Config;
 import Java_Lecture11.Ex002Phonebook.Core.Models.Contact;
 
 public class Phonebook {
 
     private final List<Contact> contacts;
-    
+
     public Phonebook() {
         contacts = new ArrayList<Contact>();
     }
@@ -29,7 +30,14 @@ public class Phonebook {
     }
 
     // update
-    // ???...
+    public boolean update(int index, Contact contact) {
+        boolean flag = false;
+        if (contains(index)) {
+            contacts.set(index, contact);
+            flag = true;
+        }
+        return flag;
+    }
 
     // delete
     public boolean remove(Contact contact) {
@@ -48,8 +56,9 @@ public class Phonebook {
     }
 
     public List<Contact> getContacts() {
-        // if ???...
-        return contacts;
+        if (!contacts.isEmpty())
+            return contacts;
+        return null;
     }
 
 

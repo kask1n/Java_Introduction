@@ -10,7 +10,7 @@ public class Presenter {
         model = new Model(pathDb);
     }
 
-    public void LoadFromFile() {
+    public void loadFromFile() {
         model.load();
 
         if (model.currentBook().count() > 0) {

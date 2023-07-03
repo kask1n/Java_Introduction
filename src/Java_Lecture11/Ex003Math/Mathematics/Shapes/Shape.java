@@ -15,11 +15,11 @@ public abstract class Shape {
         area = value;
     }
 
-    public void setNane(String value) {
+    public void setName(String value) {
         name = value;
     }
 
-    public String getNane() {
+    public String getName() {
         return name;
     }
 
